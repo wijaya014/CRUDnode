@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Data Mahasiswa</title>
+</head>
+<body>
+  <h2>Tabel data mahasiswa</h2>
+  <table border="1">
+    <tr>
+      <td>nim</td>
+      <td>nama</td>
+      <td>alamat</td>
+      <td>no telfon</td>
+      <td>action</td>
+    </tr>
+    <% mahasiswa.forEach(function(mahasiswa){ %>
+      <td><%= mahasiswa.nim %></td>
+      <td><%= mahasiswa.nama %></td>
+      <td><%= mahasiswa.alamat %></td>
+      <td><%= mahasiswa.telfon %></td>
+      <td><a href="/<%= mahasiswa._id %>/edit">edit</a></td><td><form action="/delete/<%= mahasiswa._id %>?_method=delete" method="post"><input type="submit" value="delete" /></form></td>
+    <tr>
+      <% }) %>
+    </tr>
+  </table>
+  <a href="/">back</a>
+<body>
+</html>

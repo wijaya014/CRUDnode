@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Edit</title>
+</head>
+<body>
+  <h2>Edit Data Mahasiswa</h2>
+  <form action="/<%= mahasiswa._id %>?_method=PUT" method="post">
+    <table>
+      <tr>
+          <td>nim</td>
+          <td>:</td>
+          <td><input type="text"  name="mahasiswa[nim]" value="<%= mahasiswa.nim %>"></td>
+      </tr>
+      <tr>
+          <td>nama</td>
+          <td>:</td>
+          <td><input type="text" name="mahasiswa[nama]" value="<%= mahasiswa.nama %>"></td>
+      </tr>
+      <tr>
+          <td>alamat</td>
+          <td>:</td>
+          <td><input type="text" name="mahasiswa[alamat]" value="<%= mahasiswa.alamat %>"></td>
+      </tr>
+      <tr>
+          <td>telfon</td>
+          <td>:</td>
+          <td><input type="text" name="mahasiswa[telfon]" value="<%= mahasiswa.telfon %>"></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td><input type="submit" value="update"></td>
+      </tr>
+    </table>
+    <a href="/">back</a>
+  </form>
+</body>
+</html>
