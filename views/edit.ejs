@@ -1,8 +1,4 @@
-<html>
-<head>
-<title>Edit</title>
-</head>
-<body>
+<% include ./partials/header %>
   <h2>Edit Data Mahasiswa</h2>
   <form action="/<%= mahasiswa._id %>?_method=PUT" method="post">
     <table>
@@ -34,5 +30,5 @@
     </table>
     <a href="/">back</a>
   </form>
-</body>
-</html>
+
+<% include ./partials/footer %>
